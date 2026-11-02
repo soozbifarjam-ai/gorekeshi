@@ -99,7 +99,7 @@ footer{text-align:center;color:var(--mut);font-size:13px;margin-top:20px}
       <div style="font-size:64px;margin-bottom:6px">✨</div>
       <p class="hint" style="margin:0 0 22px;font-size:18px">پنج برنده از میان ۱۵٬۸۲۳ شرکت‌کننده اعلام می‌شوند</p>
       <button class="go" id="start">شروع قرعه‌کشی</button>
-      <p class="hint">با هر کلیک، یک برنده با شمارش معکوس ۵ ثانیه‌ای اعلام می‌شود</p>
+      <p class="hint">با هر کلیک، یک برنده با شمارش معکوس ۱۰ ثانیه‌ای اعلام می‌شود</p>
     </section>
     <section class="scr" id="s1">
       <div class="cd">
@@ -125,7 +125,7 @@ const WINNERS=Object.freeze([
  {r:5,u:'@narges.moradiam',t:'نفر پنجم'},
  {r:4,u:'@mobina.farshi20',t:'نفر چهارم'},
  {r:3,u:'@shayankhani032',t:'نفر سوم'},
- {r:2,u:'@nastaran_4405',t:'نفر دوم'},
+ {r:2,u:'@alireza_niazi299',t:'نفر دوم'},
  {r:1,u:'@alireza_niazi299',t:'مقام اول'}
 ]);
 const TOTAL=15823,fa=n=>Number(n).toLocaleString('fa-IR'),$=id=>document.getElementById(id);
@@ -260,7 +260,7 @@ async function start(){
   idx=0;next(id)
 }
 async function next(id){
-  if(!await countdown(id,5000))return;
+  if(!await countdown(id,10000))return;
   await reveal(WINNERS[idx],idx,id)
 }
 
